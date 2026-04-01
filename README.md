@@ -38,7 +38,7 @@ incomplete in many ways.  To build from source:
 
 1. Install the latest btcwallet master branch.
 
-   ```
+   ```bash
    PS> go get https://github.com/btcsuite/btcwallet
    ```
 
@@ -66,12 +66,12 @@ PowerShell script is included to run these tests, but require the
 Debug (not Release) solution configuration, build this project, and then run the
 script.
 
-```
+```psd1
 PS> & .\cover.ps1
 ```
 
 Test coverage can be viewed in a web browser by navigating to
-`.\coverage\index.htm`.
+`.\coverage\index.html`.
 
 ## License
 
