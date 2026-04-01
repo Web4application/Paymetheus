@@ -54,6 +54,11 @@ incomplete in many ways.  To build from source:
 
 3. Clone the project repo and open the solution file in VS.
 
+`_Layout.cshtml`
+```js
+<script src="~/js/app.js"></script>
+<script src="~/js/library.js"></script>
+```
 4. Click Debug -> Start Debugging (or press F5) to build and execute the
    program.
 
@@ -65,14 +70,40 @@ PowerShell script is included to run these tests, but require the
 `Paymetheus.Tests.Bitcoin` project to be compiled first.  From VS, using the
 Debug (not Release) solution configuration, build this project, and then run the
 script.
-
+```index.chtml
+<div id="ts-example">
+    <br />
+    <button type="button" class="btn btn-primary btn-md" onclick="TSButton()">
+        Click Me
+    </button>
+</div>
+```
 ```psd1
 PS> & .\cover.ps1
 ```
 
 Test coverage can be viewed in a web browser by navigating to
-`.\coverage\index.html`.
-
+`.\coverage\index.cshtml`.
+```jsonl
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "ES6",
+    "outDir": "wwwroot/js"
+  },
+  "include": [
+    "scripts/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}
+```
 ## License
 
 Paymetheus is licensed under the liberal ISC License.
